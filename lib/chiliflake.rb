@@ -23,6 +23,8 @@ Pure ruby independent ID generator like the SnowFlake
 =end
 
 class ChiliFlake
+  attr_reader :seq
+
   # Offset value of the timestamp computation caluculation
   OFFSET_TS_W_MILLIS = 1288834974657
   # structure

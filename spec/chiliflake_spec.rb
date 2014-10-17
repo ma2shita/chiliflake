@@ -49,5 +49,12 @@ describe ChiliFlake, "#chiliflake" do
       expect(t.usec).to eq 52999
     end
   end
+
+  it "access to @seq" do
+    c = ChiliFlake.new(0)
+    expect(c.seq).to eq 0
+    c.generate
+    expect(c.seq).to eq 1
+  end
 end
 
